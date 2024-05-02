@@ -20,7 +20,20 @@ Overview of HAHT
 ```bash
 python setup.py develop
 ```
+### Download the pretrained blender90M model
+#### This step is necessary to reproduce the results in the original paper. As the [ParlAI](https://github.com/facebookresearch/ParlAI) is archived, the pretrained model will not be downloaded automatically.
 
+```bash
+pip install gdown
+
+cd data/
+gdown --id 1qRcKgAQvAA-hPLjHDazxV8E3ngyYfKpo
+tar -xzvf models.tar.gz
+rm models.tar.gz
+cd ..
+```
+
+You can also download [the file](https://drive.google.com/file/d/1qRcKgAQvAA-hPLjHDazxV8E3ngyYfKpo/view?usp=drive_link), extract it, and put the extracted folder under the data folder.
 
 ### Training
 
